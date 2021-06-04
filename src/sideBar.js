@@ -1,5 +1,5 @@
-
-
+import {Link} from "react-router-dom";
+ 
 export default function SideBar() {
  return<>
  
@@ -22,10 +22,10 @@ export default function SideBar() {
       <hr className="sidebar-divider my-0" />
 
       <li className="nav-item active">
-        <a className="nav-link">
+        <Link to="/dashboard" className="nav-link">
           <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
-        </a>
+        </Link>
       </li>
 
       <hr className="sidebar-divider" />
@@ -33,7 +33,7 @@ export default function SideBar() {
       <div className="sidebar-heading">Interface</div>
 
       <li className="nav-item">
-        <a
+        <Link to="/users"
           className="nav-link collapsed"
           data-toggle="collapse"
           data-target="#collapseTwo"
@@ -42,11 +42,11 @@ export default function SideBar() {
         >
           <i className="fas fa-fw fa-cog"></i>
           <span>Users</span>
-        </a>
+        </Link>
       </li>
 
       <li className="nav-item">
-        <a
+        <Link to="/profile/1" 
           className="nav-link collapsed"
           data-toggle="collapse"
           data-target="#collapseUtilities"
@@ -55,7 +55,7 @@ export default function SideBar() {
         >
           <i className="fas fa-fw fa-wrench"></i>
           <span>Profile</span>
-        </a>
+        </Link>
       </li>
 
       <hr className="sidebar-divider" />
