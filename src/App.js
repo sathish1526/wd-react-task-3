@@ -12,6 +12,7 @@ import UserList from "./userlist";
 import UserEdit from "./useredit";
 import UserCreater from "./usercreate";
 import EditProfile from "./editprofile";
+import {UserProvider} from "./usercontext";
 
 
 export default function app(){
@@ -19,6 +20,7 @@ export default function app(){
   <Router>
   <div id="wrapper">
     <SideBar></SideBar>
+    <UserProvider>
     <div id="content-wrapper" className="d-flex flex-column">
       <Topbar></Topbar>
       <div className="container-fluid">
@@ -34,6 +36,7 @@ export default function app(){
          
       </div>
     </div>
+    </UserProvider>
   </div>
   </Router>
   </>
